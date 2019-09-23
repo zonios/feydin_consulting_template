@@ -1,0 +1,16 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+header{
+  background-image: url("./src/images/back.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  height: 20rem;
+  flex-direction: column-reverse;
+}
+#mainlogo{
+  margin: 0 auto;
+  height: 8rem;
+}
