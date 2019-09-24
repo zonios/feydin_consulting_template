@@ -1,3 +1,5 @@
+/* Shared (mostly)*/
+
 * {
   box-sizing: border-box;
 }
@@ -5,7 +7,20 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+a:not(.active) {
+  transition: color 0.1s linear;
+}
+
+/* everything Header  */
 
 .mainHeader {
   background-image: linear-gradient(transparent, transparent 90%, white 100%), url("./src/images/back.jpg");
@@ -13,14 +28,34 @@ body {
   background-size: cover;
   background-position: top;
   display: flex;
-  height: 20rem;
+  height: 18rem;
   flex-direction: column-reverse;
   align-items: center;
   width: 100%;
 }
 
-a {
-  text-decoration: none;
+/* everything Footer */
+
+.mainFooter {
+  width: 100%;
+  background-color: #323e45;
+  padding: 1rem;
+}
+
+.mainFooter a:hover {
+  color: #65bdd1;
+}
+
+.footerTabs {
+  width: 100%;
+  display: flex;
+  min-height: 15rem;
+  justify-content: space-around;
+}
+
+.footerTabs>div {
+  width: 30%;
+  color: white;
 }
 
 /* everything Navbar */
@@ -31,7 +66,6 @@ a {
   width: 100%;
   justify-content: space-evenly;
   transition: all 0.5s ease-out;
-  overflow: hidden;
 }
 
 .mainNav>div {
@@ -47,7 +81,11 @@ a {
 .mainNav a {
   color: #f5f5f5;
   text-shadow: 0px 0px 2px #323e45;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.mainNav a:hover {
+  color: #65bdd1;
 }
 
 .mainNav a.active {
@@ -72,7 +110,7 @@ a {
 
 .dynamicNav a.active {
   background-color: #65bdd1;
-  /* color: #f5f5f5; */
+  color: #f5f5f5;
 }
 
 .fixedNav {
