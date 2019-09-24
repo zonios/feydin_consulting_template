@@ -1,16 +1,81 @@
-body{
+* {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
   padding: 0;
 }
-header{
-  background-image: url("./src/images/back.jpg");
+
+.mainHeader {
+  background-image: linear-gradient(transparent, transparent 90%, white 100%), url("./src/images/back.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  background-position: top;
   display: flex;
   height: 20rem;
   flex-direction: column-reverse;
+  align-items: center;
+  width: 100%;
 }
-#mainlogo{
-  margin: 0 auto;
-  height: 8rem;
+
+a {
+  text-decoration: none;
+}
+
+/* everything Navbar */
+
+.mainNav {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  justify-content: space-evenly;
+  transition: all 0.5s ease-out;
+  overflow: hidden;
+}
+
+.mainNav>div {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  border-radius: 0 0 50px 50px;
+  padding: 0 0 0.5rem;
+  background: rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+
+.mainNav a {
+  color: #f5f5f5;
+  text-shadow: 0px 0px 2px #323e45;
+  padding: 0.5rem;
+}
+
+.mainNav a.active {
+  color: black;
+  text-shadow: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.dynamicNav {
+  position: fixed;
+  top: -5rem;
+}
+
+.dynamicNav>div {
+  background: #323e45;
+  box-shadow: 0px 0px 5px rgba(187, 187, 187, 0.966);
+}
+
+.dynamicNav a {
+  text-shadow: none;
+}
+
+.dynamicNav a.active {
+  background-color: #65bdd1;
+  /* color: #f5f5f5; */
+}
+
+.fixedNav {
+  top: 0;
+  position: fixed;
 }
